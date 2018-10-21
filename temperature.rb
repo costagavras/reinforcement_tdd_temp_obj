@@ -1,14 +1,16 @@
 class Temperature
 
-  # def initialize(options = {k, v})
-  #
-  # end
   attr_accessor :f, :c
 
-  def initialize(**options)
-    options.each do |k,v|
-      instance_variable_set("@#{k}", v) unless v.nil?
-    end
+  # def initialize(**options)
+  #   options.each do |k,v|
+  #     instance_variable_set("@#{k}", v) unless v.nil?
+  #   end
+  # end
+
+  def initialize(options)
+    @f = options[:f]
+    @c = options[:c]
   end
 
   def to_fahrenheit
